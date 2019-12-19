@@ -1,0 +1,38 @@
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+
+head,
+body {
+    background-color: lavenderblush;
+}
+
+table {
+    overflow: hidden;
+    border: 1px solid #c9c4d3;
+    background: #fefcfd;
+    width: 70%;
+    margin: 5% auto ;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+td, tr {
+    text-align: center;
+}
+
+td {
+    border-top:1px solid #e0e0e0;
+    border-right:1px solid #e0e0e0;
+}
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Доброе исследование</title>
+</head>
+
+<body>
+<h2>Доброе исследование</h2>
+<form action="\process" method='GET'>
+    <legend><b>Анкета</b></legend>
+    <p>Расскажите о себе!</p>
+    <p>
+        Ваше имя?<br>
+        <label>
+            <input name="name" pattern='[A-Za-zА-Яа-яЁё]+' placeholder="Варвара" required type="text">
+        </label>
+    </p>
+    <p>
+        Ваша фамилия?<br>
+        <label>
+            <input name="surname" pattern="[A-Za-zА-Яа-яЁё]+" placeholder="Одинцова" required type="text">
+        </label>
+    </p>
+    <p>
+        Гендер:<br>
+        <label>
+            <input name="gender" type="radio" value="female" checked>
+        </label>Женский<br>
+        <label>
+            <input name="gender" type="radio" value="male">
+        </label>Мужской<br>
+    </p>
+    <p>
+        Сколько Вам лет?<br>
+        <label>
+            <input name="age" pattern='\d+' placeholder="20" required type="text">
+        </label><br>
+    </p>
+    <p>
+        В каком городе прошло Ваше детство?<br>
+        <label>
+            <input name="hometown" pattern='[A-Za-zА-Яа-яЁё-]+' placeholder="Чернигов" required type="text">
+        </label><br>
+    </p>
+    <p>
+        В каком городе Вы проживаете в настоящий момент?<br>
+        <label>
+            <input name="residence" pattern='[A-Za-zА-Яа-яЁё-]+' placeholder="Калининград" required type="text">
+        </label><br>
+    </p>
+
+    <legend><b>Опрос про ударения в русском языке</b></legend>
+    <p>Студенты Высшей Школы Экономики изучают вариативность ударения.<br>
+        Это я. Я - студенты.<br>
+        <br>
+        Выберите вариант, который кажется Вам наиболее естественным:
+    </p>
+
+    <div class="row">
+        <table class="col-md-8">
+            <tr>
+                <td>{{questions[0].question}}</td>
+            </tr>
+            <tr>
+                <td><label>
+                    <input class="radio" name="q1" type="radio" value="tv-rog" checked>
+                </label></td>
+                <td><label>
+                    <input class="radio" name="q1" type="radio" value="tvor-g">
+                </label></td>
+            </tr>
+            <tr>
+                <td>твОрог</td>
+                <td>творОг</td>
+            </tr>
+            <tr>
+                <td>{{questions[1].question}}</td>
+            </tr>
+            <tr>
+                <td><label>
+                    <input class="radio" name="q2" type="radio" value="odnovr-menno" checked>
+                </label></td>
+                <td><label>
+                    <input class="radio" name="q2" type="radio" value="odnovrem-nno">
+                </label></td>
+            </tr>
+            <tr>
+                <td>одноврЕменно</td>
+                <td>одновремЕнно</td>
+            </tr>
+            <tr>
+                <td>{{questions[2].question}}</td>
+            </tr>
+            <tr>
+                <td><label>
+                    <input class="radio" name="q3" type="radio" value="n-wton" checked>
+                </label></td>
+                <td><label>
+                    <input class="radio" name="q3" type="radio" value="newt-n">
+                </label></td>
+            </tr>
+            <tr>
+                <td>НьЮтон</td>
+                <td>НьютОн</td>
+            </tr>
+            <tr>
+                <td>{{questions[3].question}}</td>
+            </tr>
+            <tr>
+                <td><label>
+                    <input class="radio" name="q4" type="radio" value="-goditsy" checked>
+                </label></td>
+                <td><label>
+                    <input class="radio" name="q4" type="radio" value="yagod-tsy">
+                </label></td>
+            </tr>
+            <tr>
+                <td>Ягодицы</td>
+                <td>ягодИцы</td>
+            </tr>
+            <tr>
+                <td>{{questions[4].question}}</td>
+            </tr>
+            <tr>
+                <td><label>
+                    <input class="radio" name="q5" type="radio" value="k-shitsa"checked>
+                </label></td>
+                <td><label>
+                    <input class="radio" name="q5" type="radio" value="kash-tsa">
+                </label></td>
+            </tr>
+            <tr>
+                <td>кАшица</td>
+                <td>кашИца</td>
+            </tr>
+            <tr>
+                <td>{{questions[5].question}}</td>
+            </tr>
+            <tr>
+                <td><label>
+                    <input class="radio" name="q6" type="radio" value="metall-rgiya" checked>
+                </label></td>
+                <td><label>
+                    <input class="radio" name="q6" type="radio" value="metallurg-ya">
+                </label></td>
+            </tr>
+            <tr>
+                <td>металлУргия</td>
+                <td>металлургИя</td>
+            </tr>
+            <tr>
+                <td>{{questions[6].question}}</td>
+            </tr>
+            <tr>
+                <td><label>
+                    <input class="radio" name="q7" type="radio" value="t-fteli" checked>
+                </label></td>
+                <td><label>
+                    <input class="radio" name="q7" type="radio" value="teft-li">
+                </label></td>
+            </tr>
+            <tr>
+                <td>тЕфтели</td>
+                <td>тефтЕли</td>
+            </tr>
+            <tr>
+                <td>{{questions[7].question}}</td>
+            </tr>
+            <tr>
+                <td><label>
+                    <input class="radio" name="q8" type="radio" value="k-mbala" checked>
+                </label></td>
+                <td><label>
+                    <input class="radio" name="q8" type="radio" value="kambal-">
+                </label></td>
+            </tr>
+            <tr>
+                <td>кАмбала</td>
+                <td>камбалА</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <p><input type="submit" value="Отправить"></p>
+</form>
+<p><a href='./statistics'>Статистика</a></p>
+</body>
+</html>
